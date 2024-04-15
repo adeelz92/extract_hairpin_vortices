@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extract_Hairpin_Vortices</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  
+</head>
+<body>
+
+	<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Extract and Characterize Hairpin Vortices in Turbulent Flows</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/adeelz92/">Adeel Zafar</a>,</span>
+            <span class="author-block">
+              <a href="https://yang.me.uh.edu/">Di Yang</a>,</span>
+            <span class="author-block">
+              <a href="https://www2.cs.uh.edu/~chengu/">Guoning Chen</a>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of Houston</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2308.06283"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/adeelz92/hairpin-vortices-extraction"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop" style="text-align:center">
+
+    <img src="./static/images/teaser_final.png" style="width:80%;">
+    <h2 class="subtitle has-text-centered">Introducing an efficient framework to extract, characterize and visualize 
+	hairpin vortices in turbulent flows</h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Hairpin vortices are one of the most important vortical structures in turbulent flows. Extracting and characterizing hairpin vortices provides useful insight into many behaviors in turbulent flows. However, hairpin vortices have complex configurations and might be entangled with other vortices, making their extraction difficult. In this work, we introduce a framework to extract and separate hairpin vortices in shear driven turbulent flows for their study. Our method first extracts general vortical regions with a region-growing strategy based on certain vortex criteria (e.g., λ2) and then separates those vortices with the help of progressive extraction of (λ2) iso-surfaces in a top-down fashion. This leads to a hierarchical tree representing the spatial proximity and merging relation of vortices. After separating individual vortices, their shape and orientation information is extracted. Candidate hairpin vortices are identified based on their shape and orientation information as well as their physical characteristics. An interactive visualization system is developed to aid the exploration, classification, and analysis of hairpin vortices based on their geometric and physical attributes. We also present additional use cases of the proposed system for the analysis and study of general vortices in other types of flows.</p>
+        </div>
+
+        <br/>
+
+	</div> 
+	</div>
+	</div>
+	</section>
+	
+	
+<section class="hero teaser" style="margin-top: -2rem;">
+  <div class="container is-max-desktop" style="text-align:center">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Methodology</h2>
+    <img src="./static/images/main_fig.png" style="width:80%;">
+            <div class="content has-text-justified">
+          <p>
+		  Our framework consists of the following steps. First, we identify the vortices regions using a region-growing process based on a selected vortical measure (e.g., λ2). The goal of this region growing is to identify regions that may contain vortices. The resulting regions are large and contain multi-vortices. Next, we perform a top-down region-splitting process to procedurally shrink the initial regions into disjoint sub-regions that contain single vortices. This results in a hierarchical spatial relation among vortices that can be represented as a tree. Second, after obtaining the individual vortices, we construct their respective profiles. Each vortex profile consists of the physical attribute information (e.g., Q, acceleration, vorticity, etc.) and the geometric characteristics (e.g., shape, orientation, and size) of the corresponding vortex. Third, to identify hairpin vortices, using geometry and physical criteria. The criteria allow us to select candidate vortices from the above initial set of vortices through a filtering process. The goal is to include all possible hairpin vortices. Finally, we identify the “true” hairpin vortices from the above candidates. We use two strategies here. On the one hand, we use a simple clustering technique to separate the “true” hairpin vortices from the rest. On the other hand, we present an interactive visualization system to aid a manual selection of those hairpin vortices from the candidates. This system is also equipped with functionality to aid the statistical study of sets of hairpin vortices (and other general vortices).
+		  </p>
+           </div>
+	</div> 
+	</div>
+    </div>
+  </div>
+</section>
+		 
+		
+	 
+
+<section class="hero teaser" style="margin-top: 4rem;">
+  <div class="container is-max-desktop" style="text-align:center">
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+		  <div class="content has-text-justified">
+			  <p>
+			  We apply our framework and the visualization system to the direct numerical simulation of stress-driven turbulent Couette flow dataset and successfully extracted multiple hairpin vortices close to the boundary layer.
+			  </p>
+           </div>
+			<img src="./static/images/fig1.png" style="width:60%;">
+		    <div class="content has-text-justified">
+			  <p>
+			  (a) shows the omega-shaped or horseshoe vortices in the flow domain.  Zoomed-in views of the three vortices from left to right are shown in (b), (c), and (d) along with their skeleton (black) and streamlines (colored by ω′y) (e) shows the statistical overview using the parallel coordinate plot (PCP).
+			  </p>
+			</div>
+	<hr>
+			<img src="./static/images/fig2.png" style="width:60%;">
+		    <div class="content has-text-justified">
+			  <p>
+			  (a) shows a hairpin vortex in the flow domain suffering from degenerate split. (b) The tree-view in the visualization system allows to explore the vortex hierarchy which shows a complete hairpin vortex as a parent of two streamline vortices. (c) shows the PCP view of the vortices.
+			  </p>
+			</div>
+	<hr>
+	
+				<img src="./static/images/fig3.png" style="width:60%;">
+		    <div class="content has-text-justified">
+			  <p>
+			  Our framework and visualization system also allows us to explore other kind of vortex population. Here we separate and visualize different kinds of vortices in a flow behind the cylinder. Different clusters in (b) belong to the vortices of different shapes, sizes and orientation. Please refer to our paper for additional results and discussions.
+			  </p>
+			</div>
+
+	<hr>
+	
+		</div>
+    </div>
+		</div>
+	</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">BibTeX</h2>
+    <pre><code>@ARTICLE{10294258,
+  author={Zafar, Adeel and Yang, Di and Chen, Guoning},
+  journal={IEEE Transactions on Visualization and Computer Graphics}, 
+  title={Extract and Characterize Hairpin Vortices in Turbulent Flows}, 
+  year={2024},
+  volume={30},
+  number={1},
+  pages={716-726},
+  keywords={Visualization;Shape;Behavioral sciences;Histograms;Object recognition;Data mining;Training;Turbulent flow;vortices;hairpin vortex extraction},
+  doi={10.1109/TVCG.2023.3326603}}
+</code></pre>
+  </div>
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content has-text-justified">
+        <p>
+          We thank <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> for opensouring the template of this website. 
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
